@@ -7,8 +7,19 @@
     "prepare-icons": "npx @svgr/cli --out-dir icons --index-template index-template.js --template svg-template.js --svg-props height={size} --svg-props width={size} --svg-props strokeWidth={stroke} --typescript -- node_modules/@tabler/icons/icons",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Burak Gür <gurbrk@gmail.com>",
   "license": "ISC",
+  "keywords": [
+    "tabler-icons",
+    "react-native",
+    "svg",
+    "icons",
+    "icon-pack",
+    "icon",
+    "iconset",
+    "quality-svg-icons",
+    "tabler-icons-react-native"
+  ],
   "dependencies": {
     "react-native-svg": "^14.1.0"
   },
