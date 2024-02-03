@@ -10,9 +10,6 @@ permissions:
   id-token: write
 
 jobs:
-  build:
-  # same as the other build
-
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
