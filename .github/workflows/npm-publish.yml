@@ -1,0 +1,28 @@
+# .github/workflows/npm-publish.yml
+name: Tabler React Native
+
+on:
+  push:
+    tags:
+      - "*"
+
+permissions:
+  id-token: write
+
+jobs:
+  build:
+  # same as the other build
+
+  publish-npm:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+      with:
+        node-version: 20
+        registry-url: https://registry.npmjs.org/
+      - run: npm ci
+      - run: npm publish --provenance
+      env:
+        NODE_AUTH_TOKEN: $
