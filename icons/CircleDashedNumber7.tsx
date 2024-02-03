@@ -1,0 +1,28 @@
+import * as React from "react";
+import type { SVGProps } from "react";
+const SvgCircleDashedNumber7 = ({
+  size = 24,
+  stroke = 2,
+  ...props
+}: {
+  size: number,
+  stroke: number,
+  props: SVGProps,
+}) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    fill="none"
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={stroke}
+    className="icon icon-tabler icon-tabler-circle-dashed-number-7"
+    {...props}
+  >
+    <path stroke="none" d="M0 0h24v24H0z" />
+    <path d="M8.56 3.69a9 9 0 0 0-2.92 1.95M3.69 8.56A9 9 0 0 0 3 12M3.69 15.44a9 9 0 0 0 1.95 2.92M8.56 20.31A9 9 0 0 0 12 21M15.44 20.31a9 9 0 0 0 2.92-1.95M20.31 15.44A9 9 0 0 0 21 12M20.31 8.56a9 9 0 0 0-1.95-2.92M15.44 3.69A9 9 0 0 0 12 3M10 8h4l-2 8" />
+  </svg>
+);
+export default SvgCircleDashedNumber7;

@@ -1,0 +1,28 @@
+import * as React from "react";
+import type { SVGProps } from "react";
+const SvgJewishStar = ({
+  size = 24,
+  stroke = 2,
+  ...props
+}: {
+  size: number,
+  stroke: number,
+  props: SVGProps,
+}) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    fill="none"
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={stroke}
+    className="icon icon-tabler icon-tabler-jewish-star"
+    {...props}
+  >
+    <path stroke="none" d="M0 0h24v24H0z" />
+    <path d="m12 2 3 5h6l-3 5 3 5h-6l-3 5-3-5H3l3-5-3-5h6z" />
+  </svg>
+);
+export default SvgJewishStar;

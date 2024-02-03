@@ -1,0 +1,28 @@
+import * as React from "react";
+import type { SVGProps } from "react";
+const SvgMapRoute = ({
+  size = 24,
+  stroke = 2,
+  ...props
+}: {
+  size: number,
+  stroke: number,
+  props: SVGProps,
+}) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    fill="none"
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={stroke}
+    className="icon icon-tabler icon-tabler-map-route"
+    {...props}
+  >
+    <path stroke="none" d="M0 0h24v24H0z" />
+    <path d="m3 7 6-3 6 3 6-3v13l-6 3-6-3-6 3zM9 12v.01M6 13v.01M17 15l-4-4M13 15l4-4" />
+  </svg>
+);
+export default SvgMapRoute;

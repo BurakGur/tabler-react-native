@@ -1,0 +1,28 @@
+import * as React from "react";
+import type { SVGProps } from "react";
+const SvgBrandTwitch = ({
+  size = 24,
+  stroke = 2,
+  ...props
+}: {
+  size: number,
+  stroke: number,
+  props: SVGProps,
+}) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    fill="none"
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={stroke}
+    className="icon icon-tabler icon-tabler-brand-twitch"
+    {...props}
+  >
+    <path stroke="none" d="M0 0h24v24H0z" />
+    <path d="M4 5v11a1 1 0 0 0 1 1h2v4l4-4h5.584c.266 0 .52-.105.707-.293l2.415-2.414c.187-.188.293-.442.293-.708V5a1 1 0 0 0-1-1h-14a1 1 0 0 0-1 1zM16 8v4M12 8v4" />
+  </svg>
+);
+export default SvgBrandTwitch;

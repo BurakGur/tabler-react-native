@@ -1,0 +1,19 @@
+{
+  "name": "tabler-react-native",
+  "version": "1.0.0",
+  "description": "Tabler Icons for React Native",
+  "main": "index.js",
+  "scripts": {
+    "prepare-icons": "npx @svgr/cli --out-dir icons --index-template index-template.js --template svg-template.js --svg-props height={size} --svg-props width={size} --svg-props strokeWidth={stroke} --typescript -- node_modules/@tabler/icons/icons",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react-native-svg": "^14.1.0"
+  },
+  "devDependencies": {
+    "@svgr/cli": "^8.1.0",
+    "@tabler/icons": "^2.47.0"
+  }
+}
