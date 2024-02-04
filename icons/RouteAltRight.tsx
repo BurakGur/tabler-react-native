@@ -1,29 +1,30 @@
 import * as React from "react";
-import type { SVGProps } from "react";
+import Svg, { Path } from "react-native-svg";
+import type { SvgProps } from "react-native-svg";
 const SvgRouteAltRight = ({
   size = 24,
   stroke = 2,
-  ...props
+  color = "currentColor",
 }: {
   size: number,
   stroke: number,
-  props: SVGProps,
+  color: string,
 }) => (
-  <svg
+  <Svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
     height={size}
     fill="none"
-    stroke="currentColor"
+    stroke={color}
     strokeLinecap="round"
     strokeLinejoin="round"
     strokeWidth={stroke}
     className="icon icon-tabler icon-tabler-route-alt-right"
     {...props}
   >
-    <path stroke="none" d="M0 0h24v24H0z" />
-    <path d="M16 3h5v5M8 3H3v5" />
-    <path d="m21 3-7.536 7.536A5 5 0 0 0 12 14.07V21M6 6.01V6M8 8.02v-.01M10 10v.01" />
-  </svg>
+    <Path stroke="none" d="M0 0h24v24H0z" />
+    <Path d="M16 3h5v5M8 3H3v5" />
+    <Path d="m21 3-7.536 7.536A5 5 0 0 0 12 14.07V21M6 6.01V6M8 8.02v-.01M10 10v.01" />
+  </Svg>
 );
 export default SvgRouteAltRight;

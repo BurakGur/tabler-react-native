@@ -1,28 +1,29 @@
 import * as React from "react";
-import type { SVGProps } from "react";
+import Svg, { Path } from "react-native-svg";
+import type { SvgProps } from "react-native-svg";
 const SvgPlusEqual = ({
   size = 24,
   stroke = 2,
-  ...props
+  color = "currentColor",
 }: {
   size: number,
   stroke: number,
-  props: SVGProps,
+  color: string,
 }) => (
-  <svg
+  <Svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
     height={size}
     fill="none"
-    stroke="currentColor"
+    stroke={color}
     strokeLinecap="round"
     strokeLinejoin="round"
     strokeWidth={stroke}
     className="icon icon-tabler icon-tabler-plus-equal"
     {...props}
   >
-    <path stroke="none" d="M0 0h24v24H0z" />
-    <path d="M4 7h6M7 4v6M20 16h-6M20 19h-6M5 19 19 5" />
-  </svg>
+    <Path stroke="none" d="M0 0h24v24H0z" />
+    <Path d="M4 7h6M7 4v6M20 16h-6M20 19h-6M5 19 19 5" />
+  </Svg>
 );
 export default SvgPlusEqual;

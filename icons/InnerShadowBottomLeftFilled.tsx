@@ -1,32 +1,33 @@
 import * as React from "react";
-import type { SVGProps } from "react";
+import Svg, { Path } from "react-native-svg";
+import type { SvgProps } from "react-native-svg";
 const SvgInnerShadowBottomLeftFilled = ({
   size = 24,
   stroke = 2,
-  ...props
+  color = "currentColor",
 }: {
   size: number,
   stroke: number,
-  props: SVGProps,
+  color: string,
 }) => (
-  <svg
+  <Svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
     height={size}
     fill="none"
-    stroke="currentColor"
+    stroke={color}
     strokeLinecap="round"
     strokeLinejoin="round"
     strokeWidth={stroke}
     className="icon icon-tabler icon-tabler-inner-shadow-bottom-left-filled"
     {...props}
   >
-    <path stroke="none" d="M0 0h24v24H0z" />
-    <path
+    <Path stroke="none" d="M0 0h24v24H0z" />
+    <Path
       fill="currentColor"
       stroke="none"
       d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2m-6 9a1 1 0 0 0-1 1 7 7 0 0 0 7 7 1 1 0 0 0 0-2 5 5 0 0 1-5-5 1 1 0 0 0-1-1"
     />
-  </svg>
+  </Svg>
 );
 export default SvgInnerShadowBottomLeftFilled;

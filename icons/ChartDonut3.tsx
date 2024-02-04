@@ -1,29 +1,30 @@
 import * as React from "react";
-import type { SVGProps } from "react";
+import Svg, { Path } from "react-native-svg";
+import type { SvgProps } from "react-native-svg";
 const SvgChartDonut3 = ({
   size = 24,
   stroke = 2,
-  ...props
+  color = "currentColor",
 }: {
   size: number,
   stroke: number,
-  props: SVGProps,
+  color: string,
 }) => (
-  <svg
+  <Svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
     height={size}
     fill="none"
-    stroke="currentColor"
+    stroke={color}
     strokeLinecap="round"
     strokeLinejoin="round"
     strokeWidth={stroke}
     className="icon icon-tabler icon-tabler-chart-donut-3"
     {...props}
   >
-    <path stroke="none" d="M0 0h24v24H0z" />
-    <path d="M12 3v5m4 4h5M8.929 14.582 5.5 17.5M8 12a4 4 0 1 0 8 0 4 4 0 1 0-8 0" />
-    <path d="M3 12a9 9 0 1 0 18 0 9 9 0 1 0-18 0" />
-  </svg>
+    <Path stroke="none" d="M0 0h24v24H0z" />
+    <Path d="M12 3v5m4 4h5M8.929 14.582 5.5 17.5M8 12a4 4 0 1 0 8 0 4 4 0 1 0-8 0" />
+    <Path d="M3 12a9 9 0 1 0 18 0 9 9 0 1 0-18 0" />
+  </Svg>
 );
 export default SvgChartDonut3;

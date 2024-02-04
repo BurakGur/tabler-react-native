@@ -1,28 +1,29 @@
 import * as React from "react";
-import type { SVGProps } from "react";
+import Svg, { Path } from "react-native-svg";
+import type { SvgProps } from "react-native-svg";
 const SvgLadderOff = ({
   size = 24,
   stroke = 2,
-  ...props
+  color = "currentColor",
 }: {
   size: number,
   stroke: number,
-  props: SVGProps,
+  color: string,
 }) => (
-  <svg
+  <Svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
     height={size}
     fill="none"
-    stroke="currentColor"
+    stroke={color}
     strokeLinecap="round"
     strokeLinejoin="round"
     strokeWidth={stroke}
     className="icon icon-tabler icon-tabler-ladder-off"
     {...props}
   >
-    <path stroke="none" d="M0 0h24v24H0z" />
-    <path d="M8 3v1m0 4v13M16 3v9m0 4v5M8 14h6M8 10h2m4 0h2M10 6h6M8 18h8M3 3l18 18" />
-  </svg>
+    <Path stroke="none" d="M0 0h24v24H0z" />
+    <Path d="M8 3v1m0 4v13M16 3v9m0 4v5M8 14h6M8 10h2m4 0h2M10 6h6M8 18h8M3 3l18 18" />
+  </Svg>
 );
 export default SvgLadderOff;

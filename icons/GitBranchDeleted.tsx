@@ -1,29 +1,30 @@
 import * as React from "react";
-import type { SVGProps } from "react";
+import Svg, { Path } from "react-native-svg";
+import type { SvgProps } from "react-native-svg";
 const SvgGitBranchDeleted = ({
   size = 24,
   stroke = 2,
-  ...props
+  color = "currentColor",
 }: {
   size: number,
   stroke: number,
-  props: SVGProps,
+  color: string,
 }) => (
-  <svg
+  <Svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
     height={size}
     fill="none"
-    stroke="currentColor"
+    stroke={color}
     strokeLinecap="round"
     strokeLinejoin="round"
     strokeWidth={stroke}
     className="icon icon-tabler icon-tabler-git-branch-deleted"
     {...props}
   >
-    <path stroke="none" d="M0 0h24v24H0z" />
-    <path d="M5 18a2 2 0 1 0 4 0 2 2 0 1 0-4 0M5 6a2 2 0 1 0 4 0 2 2 0 1 0-4 0M7 8v8M9 18h6a2 2 0 0 0 2-2v-5" />
-    <path d="m14 14 3-3 3 3M15 4l4 4M15 8l4-4" />
-  </svg>
+    <Path stroke="none" d="M0 0h24v24H0z" />
+    <Path d="M5 18a2 2 0 1 0 4 0 2 2 0 1 0-4 0M5 6a2 2 0 1 0 4 0 2 2 0 1 0-4 0M7 8v8M9 18h6a2 2 0 0 0 2-2v-5" />
+    <Path d="m14 14 3-3 3 3M15 4l4 4M15 8l4-4" />
+  </Svg>
 );
 export default SvgGitBranchDeleted;

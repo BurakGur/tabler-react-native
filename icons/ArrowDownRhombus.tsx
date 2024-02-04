@@ -1,28 +1,29 @@
 import * as React from "react";
-import type { SVGProps } from "react";
+import Svg, { Path } from "react-native-svg";
+import type { SvgProps } from "react-native-svg";
 const SvgArrowDownRhombus = ({
   size = 24,
   stroke = 2,
-  ...props
+  color = "currentColor",
 }: {
   size: number,
   stroke: number,
-  props: SVGProps,
+  color: string,
 }) => (
-  <svg
+  <Svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
     height={size}
     fill="none"
-    stroke="currentColor"
+    stroke={color}
     strokeLinecap="round"
     strokeLinejoin="round"
     strokeWidth={stroke}
     className="icon icon-tabler icon-tabler-arrow-down-rhombus"
     {...props}
   >
-    <path stroke="none" d="M0 0h24v24H0z" />
-    <path d="M12 8v13M15 18l-3 3-3-3M14.5 5.5 12 3 9.5 5.5 12 8z" />
-  </svg>
+    <Path stroke="none" d="M0 0h24v24H0z" />
+    <Path d="M12 8v13M15 18l-3 3-3-3M14.5 5.5 12 3 9.5 5.5 12 8z" />
+  </Svg>
 );
 export default SvgArrowDownRhombus;

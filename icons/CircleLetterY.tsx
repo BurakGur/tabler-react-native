@@ -1,29 +1,30 @@
 import * as React from "react";
-import type { SVGProps } from "react";
+import Svg, { Path } from "react-native-svg";
+import type { SvgProps } from "react-native-svg";
 const SvgCircleLetterY = ({
   size = 24,
   stroke = 2,
-  ...props
+  color = "currentColor",
 }: {
   size: number,
   stroke: number,
-  props: SVGProps,
+  color: string,
 }) => (
-  <svg
+  <Svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
     height={size}
     fill="none"
-    stroke="currentColor"
+    stroke={color}
     strokeLinecap="round"
     strokeLinejoin="round"
     strokeWidth={stroke}
     className="icon icon-tabler icon-tabler-circle-letter-y"
     {...props}
   >
-    <path stroke="none" d="M0 0h24v24H0z" />
-    <path d="M3 12a9 9 0 1 0 18 0 9 9 0 1 0-18 0" />
-    <path d="m10 8 2 5 2-5M12 16v-3" />
-  </svg>
+    <Path stroke="none" d="M0 0h24v24H0z" />
+    <Path d="M3 12a9 9 0 1 0 18 0 9 9 0 1 0-18 0" />
+    <Path d="m10 8 2 5 2-5M12 16v-3" />
+  </Svg>
 );
 export default SvgCircleLetterY;

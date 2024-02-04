@@ -1,28 +1,29 @@
 import * as React from "react";
-import type { SVGProps } from "react";
+import Svg, { Path } from "react-native-svg";
+import type { SvgProps } from "react-native-svg";
 const SvgNavigationWest = ({
   size = 24,
   stroke = 2,
-  ...props
+  color = "currentColor",
 }: {
   size: number,
   stroke: number,
-  props: SVGProps,
+  color: string,
 }) => (
-  <svg
+  <Svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
     height={size}
     fill="none"
-    stroke="currentColor"
+    stroke={color}
     strokeLinecap="round"
     strokeLinejoin="round"
     strokeWidth={stroke}
     className="icon icon-tabler icon-tabler-navigation-west"
     {...props}
   >
-    <path stroke="none" d="M0 0h24v24H0z" />
-    <path d="m9 3 1 6 2-3.75L14 9l1-6M16 21l-4-8-4 8 4-2z" />
-  </svg>
+    <Path stroke="none" d="M0 0h24v24H0z" />
+    <Path d="m9 3 1 6 2-3.75L14 9l1-6M16 21l-4-8-4 8 4-2z" />
+  </Svg>
 );
 export default SvgNavigationWest;

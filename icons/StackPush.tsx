@@ -1,29 +1,30 @@
 import * as React from "react";
-import type { SVGProps } from "react";
+import Svg, { Path } from "react-native-svg";
+import type { SvgProps } from "react-native-svg";
 const SvgStackPush = ({
   size = 24,
   stroke = 2,
-  ...props
+  color = "currentColor",
 }: {
   size: number,
   stroke: number,
-  props: SVGProps,
+  color: string,
 }) => (
-  <svg
+  <Svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
     height={size}
     fill="none"
-    stroke="currentColor"
+    stroke={color}
     strokeLinecap="round"
     strokeLinejoin="round"
     strokeWidth={stroke}
     className="icon icon-tabler icon-tabler-stack-push"
     {...props}
   >
-    <path stroke="none" d="M0 0h24v24H0z" />
-    <path d="m6 10-2 1 8 4 8-4-2-1M4 15l8 4 8-4M12 4v7" />
-    <path d="m15 8-3 3-3-3" />
-  </svg>
+    <Path stroke="none" d="M0 0h24v24H0z" />
+    <Path d="m6 10-2 1 8 4 8-4-2-1M4 15l8 4 8-4M12 4v7" />
+    <Path d="m15 8-3 3-3-3" />
+  </Svg>
 );
 export default SvgStackPush;

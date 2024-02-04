@@ -1,29 +1,30 @@
 import * as React from "react";
-import type { SVGProps } from "react";
+import Svg, { Path } from "react-native-svg";
+import type { SvgProps } from "react-native-svg";
 const SvgMoodUp = ({
   size = 24,
   stroke = 2,
-  ...props
+  color = "currentColor",
 }: {
   size: number,
   stroke: number,
-  props: SVGProps,
+  color: string,
 }) => (
-  <svg
+  <Svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
     height={size}
     fill="none"
-    stroke="currentColor"
+    stroke={color}
     strokeLinecap="round"
     strokeLinejoin="round"
     strokeWidth={stroke}
     className="icon icon-tabler icon-tabler-mood-up"
     {...props}
   >
-    <path stroke="none" d="M0 0h24v24H0z" />
-    <path d="M20.984 12.536a9 9 0 1 0-8.463 8.449M19 22v-6M22 19l-3-3-3 3M9 10h.01M15 10h.01" />
-    <path d="M9.5 15c.658.64 1.56 1 2.5 1s1.842-.36 2.5-1" />
-  </svg>
+    <Path stroke="none" d="M0 0h24v24H0z" />
+    <Path d="M20.984 12.536a9 9 0 1 0-8.463 8.449M19 22v-6M22 19l-3-3-3 3M9 10h.01M15 10h.01" />
+    <Path d="M9.5 15c.658.64 1.56 1 2.5 1s1.842-.36 2.5-1" />
+  </Svg>
 );
 export default SvgMoodUp;

@@ -1,29 +1,30 @@
 import * as React from "react";
-import type { SVGProps } from "react";
+import Svg, { Path } from "react-native-svg";
+import type { SvgProps } from "react-native-svg";
 const SvgBrandGoogleDrive = ({
   size = 24,
   stroke = 2,
-  ...props
+  color = "currentColor",
 }: {
   size: number,
   stroke: number,
-  props: SVGProps,
+  color: string,
 }) => (
-  <svg
+  <Svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
     height={size}
     fill="none"
-    stroke="currentColor"
+    stroke={color}
     strokeLinecap="round"
     strokeLinejoin="round"
     strokeWidth={stroke}
     className="icon icon-tabler icon-tabler-brand-google-drive"
     {...props}
   >
-    <path stroke="none" d="M0 0h24v24H0z" />
-    <path d="M12 10 6 20l-3-5L9 5z" />
-    <path d="M9 15h12l-3 5H6M15 15 9 5h6l6 10z" />
-  </svg>
+    <Path stroke="none" d="M0 0h24v24H0z" />
+    <Path d="M12 10 6 20l-3-5L9 5z" />
+    <Path d="M9 15h12l-3 5H6M15 15 9 5h6l6 10z" />
+  </Svg>
 );
 export default SvgBrandGoogleDrive;

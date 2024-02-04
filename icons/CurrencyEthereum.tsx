@@ -1,29 +1,30 @@
 import * as React from "react";
-import type { SVGProps } from "react";
+import Svg, { Path } from "react-native-svg";
+import type { SvgProps } from "react-native-svg";
 const SvgCurrencyEthereum = ({
   size = 24,
   stroke = 2,
-  ...props
+  color = "currentColor",
 }: {
   size: number,
   stroke: number,
-  props: SVGProps,
+  color: string,
 }) => (
-  <svg
+  <Svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
     height={size}
     fill="none"
-    stroke="currentColor"
+    stroke={color}
     strokeLinecap="round"
     strokeLinejoin="round"
     strokeWidth={stroke}
     className="icon icon-tabler icon-tabler-currency-ethereum"
     {...props}
   >
-    <path stroke="none" d="M0 0h24v24H0z" />
-    <path d="m6 12 6-9 6 9-6 9z" />
-    <path d="m6 12 6-3 6 3-6 2z" />
-  </svg>
+    <Path stroke="none" d="M0 0h24v24H0z" />
+    <Path d="m6 12 6-9 6 9-6 9z" />
+    <Path d="m6 12 6-3 6 3-6 2z" />
+  </Svg>
 );
 export default SvgCurrencyEthereum;

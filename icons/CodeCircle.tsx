@@ -1,29 +1,30 @@
 import * as React from "react";
-import type { SVGProps } from "react";
+import Svg, { Path } from "react-native-svg";
+import type { SvgProps } from "react-native-svg";
 const SvgCodeCircle = ({
   size = 24,
   stroke = 2,
-  ...props
+  color = "currentColor",
 }: {
   size: number,
   stroke: number,
-  props: SVGProps,
+  color: string,
 }) => (
-  <svg
+  <Svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
     height={size}
     fill="none"
-    stroke="currentColor"
+    stroke={color}
     strokeLinecap="round"
     strokeLinejoin="round"
     strokeWidth={stroke}
     className="icon icon-tabler icon-tabler-code-circle"
     {...props}
   >
-    <path stroke="none" d="M0 0h24v24H0z" />
-    <path d="m10 14-2-2 2-2M14 10l2 2-2 2" />
-    <path d="M3 12a9 9 0 1 0 18 0 9 9 0 1 0-18 0" />
-  </svg>
+    <Path stroke="none" d="M0 0h24v24H0z" />
+    <Path d="m10 14-2-2 2-2M14 10l2 2-2 2" />
+    <Path d="M3 12a9 9 0 1 0 18 0 9 9 0 1 0-18 0" />
+  </Svg>
 );
 export default SvgCodeCircle;

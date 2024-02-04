@@ -1,29 +1,30 @@
 import * as React from "react";
-import type { SVGProps } from "react";
+import Svg, { Path } from "react-native-svg";
+import type { SvgProps } from "react-native-svg";
 const SvgCircleChevronsDown = ({
   size = 24,
   stroke = 2,
-  ...props
+  color = "currentColor",
 }: {
   size: number,
   stroke: number,
-  props: SVGProps,
+  color: string,
 }) => (
-  <svg
+  <Svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
     height={size}
     fill="none"
-    stroke="currentColor"
+    stroke={color}
     strokeLinecap="round"
     strokeLinejoin="round"
     strokeWidth={stroke}
     className="icon icon-tabler icon-tabler-circle-chevrons-down"
     {...props}
   >
-    <path stroke="none" d="M0 0h24v24H0z" />
-    <path d="m15 9-3 3-3-3M15 13l-3 3-3-3" />
-    <path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18" />
-  </svg>
+    <Path stroke="none" d="M0 0h24v24H0z" />
+    <Path d="m15 9-3 3-3-3M15 13l-3 3-3-3" />
+    <Path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18" />
+  </Svg>
 );
 export default SvgCircleChevronsDown;
