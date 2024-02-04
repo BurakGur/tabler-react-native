@@ -1,10 +1,12 @@
-# .github/workflows/npm-publish.yml
-name: Tabler React Native
+name: Node.js Package
 
 on:
+  pull_request:
+    branches:
+      - master
   push:
-    tags:
-      - "*"
+    branches:
+      - master
 
 permissions:
   id-token: write
@@ -13,11 +15,12 @@ jobs:
   publish-npm:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
-      with:
-        node-version: 18
-        registry-url: https://registry.npmjs.org/
-      - run: yarn publish --provenance
-      env:
-        NODE_AUTH_TOKEN: $
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 18
+          registry-url: https://registry.npmjs.org/
+      - run: yarn publish
+        if: github.event == 'push'
+        env:
+          NODE_AUTH_TOKEN: $
