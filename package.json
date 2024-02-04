@@ -11,6 +11,9 @@
     "type": "git",
     "url": "git+https://github.com/BurakGur/tabler-react-native"
   },
+  "publishConfig": {
+    "@BurakGur:registry": "https://npm.pkg.github.com"
+  },
   "author": "Burak Gür <gurbrk@gmail.com>",
   "license": "ISC",
   "keywords": [
