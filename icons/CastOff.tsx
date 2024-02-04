@@ -21,6 +21,7 @@ const SvgCastOff = ({
     strokeLinejoin="round"
     strokeWidth={stroke}
     className=""
+    viewBox="0 0 24 24"
     {...props}
   >
     <Path stroke="none" d="M0 0h24v24H0z" />
