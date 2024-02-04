@@ -5,6 +5,7 @@ const SvgWalk = ({
   size = 24,
   stroke = 2,
   color = "currentColor",
+  ...props
 }: {
   size: number,
   stroke: number,
@@ -19,7 +20,7 @@ const SvgWalk = ({
     strokeLinecap="round"
     strokeLinejoin="round"
     strokeWidth={stroke}
-    className="icon icon-tabler icon-tabler-walk"
+    className=""
     {...props}
   >
     <Path stroke="none" d="M0 0h24v24H0z" />

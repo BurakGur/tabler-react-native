@@ -5,6 +5,7 @@ const SvgMoodOff = ({
   size = 24,
   stroke = 2,
   color = "currentColor",
+  ...props
 }: {
   size: number,
   stroke: number,
@@ -19,7 +20,7 @@ const SvgMoodOff = ({
     strokeLinecap="round"
     strokeLinejoin="round"
     strokeWidth={stroke}
-    className="icon icon-tabler icon-tabler-mood-off"
+    className=""
     {...props}
   >
     <Path stroke="none" d="M0 0h24v24H0z" />

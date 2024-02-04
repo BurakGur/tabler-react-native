@@ -5,6 +5,7 @@ const SvgAlignBoxRightBottomFilled = ({
   size = 24,
   stroke = 2,
   color = "currentColor",
+  ...props
 }: {
   size: number,
   stroke: number,
@@ -19,7 +20,7 @@ const SvgAlignBoxRightBottomFilled = ({
     strokeLinecap="round"
     strokeLinejoin="round"
     strokeWidth={stroke}
-    className="icon icon-tabler icon-tabler-align-box-right-bottom-filled"
+    className=""
     {...props}
   >
     <Path stroke="none" d="M0 0h24v24H0z" />

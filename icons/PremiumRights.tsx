@@ -5,6 +5,7 @@ const SvgPremiumRights = ({
   size = 24,
   stroke = 2,
   color = "currentColor",
+  ...props
 }: {
   size: number,
   stroke: number,
@@ -19,7 +20,7 @@ const SvgPremiumRights = ({
     strokeLinecap="round"
     strokeLinejoin="round"
     strokeWidth={stroke}
-    className="icon icon-tabler icon-tabler-premium-rights"
+    className=""
     {...props}
   >
     <Path stroke="none" d="M0 0h24v24H0z" />

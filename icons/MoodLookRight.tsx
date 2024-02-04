@@ -5,6 +5,7 @@ const SvgMoodLookRight = ({
   size = 24,
   stroke = 2,
   color = "currentColor",
+  ...props
 }: {
   size: number,
   stroke: number,
@@ -19,7 +20,7 @@ const SvgMoodLookRight = ({
     strokeLinecap="round"
     strokeLinejoin="round"
     strokeWidth={stroke}
-    className="icon icon-tabler icon-tabler-mood-look-right"
+    className=""
     {...props}
   >
     <Path stroke="none" d="M0 0h24v24H0z" />

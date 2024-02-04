@@ -5,6 +5,7 @@ const SvgLogin2 = ({
   size = 24,
   stroke = 2,
   color = "currentColor",
+  ...props
 }: {
   size: number,
   stroke: number,
@@ -19,7 +20,7 @@ const SvgLogin2 = ({
     strokeLinecap="round"
     strokeLinejoin="round"
     strokeWidth={stroke}
-    className="icon icon-tabler icon-tabler-login-2"
+    className=""
     {...props}
   >
     <Path stroke="none" d="M0 0h24v24H0z" />
