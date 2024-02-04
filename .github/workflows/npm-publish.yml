@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
-      - run: yarn publish
+      - run: npm publish --provenance
         if: github.event == 'push'
         env:
           NODE_AUTH_TOKEN: $
@@ -31,7 +31,7 @@ jobs:
           node-version: 20
           registry-url: https://npm.pkg.github.com/
           scope: '@burak.gur'
-      - run: yarn publish
+      - run: npm publish --provenance
         if: github.event == 'push'
         env:
           NODE_AUTH_TOKEN: $
