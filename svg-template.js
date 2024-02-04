@@ -4,7 +4,7 @@ ${variables.imports};
 
 ${variables.interfaces};
 
-const ${variables.componentName} = ({size = 24, stroke = 2, color = 'currentColor'}: {size: number, stroke: number, color: string}) => (
+const ${variables.componentName} = ({size = 24, stroke = 2, color = 'currentColor', ...props}: {size: number, stroke: number, color: string}) => (
   ${variables.jsx}
 );
 
