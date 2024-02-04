@@ -1,12 +1,9 @@
 name: Node.js Package
 
 on:
-  pull_request:
-    branches:
-      - main
   push:
-    branches:
-      - main
+    tags:
+      - "*"
 
 permissions:
   id-token: write
@@ -15,10 +12,10 @@ jobs:
   publish-npm:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
           registry-url: https://registry.npmjs.org/
       - run: yarn publish
         if: github.event == 'push'
@@ -28,10 +25,10 @@ jobs:
   publish-gpr:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
           registry-url: https://npm.pkg.github.com/
           scope: '@burak.gur'
       - run: yarn publish
